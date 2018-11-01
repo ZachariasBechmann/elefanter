@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: Georgia, serif;
+}
+
+
+/* Skriv CSS Grid reglerne herunder */
+.container {
+    display:grid;
+    grid-template-rows:auto auto auto;
+    grid-template-columns: minmax(25em, 1fr) 16em;
+    grid-template-areas:"banner banner" "main hours" "footer footer";
+}
+
+.sidehoved {
+    grid-area: banner;
+}
+
+.sidefod {
+    grid-area: footer;
+}
+
+.hovedindhold {
+    grid-area: main;
+}
+
+.sidepanel {
+    grid-area: hours;
+}
+
+.broed__section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.galleri {
+    max-width: 100%;
+}
+
+.testing {
+   columns: 15em;
+}
+
+@media only screen and (min-width: 600px) {
+    .boks {
+        width: 45%
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .container {
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:"banner""main""hours""footer";
+    }
+    .award{
+        display: none;
+    }
+    
+    .sidepanel{
+        text-align: center;
+    }
+    
+    .hovednavigation__liste{
+        display: flex;
+        flex-direction:column;
+    }
+    .afsender{
+        position: relative;
+        top: -1.em;
+    }
+    
+    .salgstekst{
+        display:none;
+    }
+}
+/* slut på media */
+
+/* link styles */
+
+.linkstate a.link:hover {
+    color: #DC6903;
+}
+
+.link {
+    color: #F9AB33;
+    text-decoration: none;
+}
+
+.laesmere__link {
+    border-bottom: 1px dotted;
+}
+
+/* sidehoved styles */
+
+.sidehoved {
+    color: white;
+    background: url(images/croissants_banner.jpg) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    height: 15em;
+}
+
+.salgstekst {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: -12px;
+}
+
+.afsender {
+    margin-top: 1.5em;
+}
+
+
+/* hovednavigationen styles */
+
+.hovednavigation {
+    font-family: verdana, sans-serif;
+    background-color: #783F27;
+}
+
+
+.hovednavigation__liste {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+.hovednavigation__listeelement {
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+.hovednavigation__link {
+    display: block;
+    border: 1px solid;
+    border-radius: .5em;
+    padding: .5em 1em;
+    margin: .5em;
+}
+
+
+/* hovedprodukter styles */
+
+.hovedindhold {
+    font-family: 'Stint Ultra Expanded', Georgia, serif;
+    background-color: white;
+    line-height: 1.8em;
+    color: #555;
+    padding: 1em;
+    border: double 4px #EADDC4;
+    border-radius: 25px;
+    margin: 2.5%;
+}
+
+.produktoverskrift {
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    color: #7A0002;
+    border-top: 1px solid;
+    border-left: 3px solid;
+    padding-left: 1em;
+    margin-top: 2.5em;
+}
+
+.laesmere {
+    font-family: verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: .8em;
+    clear: left;
+}
+
+.produktbillede {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+
+/* åbningstider styles */
+
+.sidepanel {
+    background: url(images/scallop.png) repeat-y left top;
+    background-color: #F6F3ED;
+    padding: 18%;
+    padding-left: 45px;
+
+}
+
+/* forskellige styles */
+
+.sidefod {
+    color: #EADDC4;
+    text-align: center;
+    font-size: .8em;
+    padding: 1em;
+    font-family: verdana, sans-serif;
+    background-color: #783F27;
+    height: 5em;
+}
+
+.award {
+    position: fixed;
+    top: 30px;
+    left: 50px;
+}
+
+.overskrift {
+    font-family: 'Stint Ultra Expanded', Georgia, serif;
+    margin-bottom: 0.5em;
+}
+
+.dag {
+    color: #783F27;
+    font-family: verdana, sans-serif;
+    font-size: .8em;
+    text-transform: uppercase;
+}
+
+.aaben {
+    margin-bottom: 0.5em;
+}
+
+.kopiret {
+    margin-top: 1em;
+}
